@@ -11,35 +11,40 @@ public class Buzon {
     public String getMensaje() {
         return Mensaje;
     }
+
     
     
     
 
-    public void leer() throws InterruptedException {
+    public synchronized void leer() throws InterruptedException {
         if (Mensaje == "") {
             System.out.println("El lector espera");
+          
             
-            
-        } else {
+        } if (Mensaje==Mensaje) {
             System.out.println("Leer");
             Mensaje="";
+            
             notify();
+            
             
         }
     }
 
-    public void escribir() throws InterruptedException {
+    public synchronized void escribir() throws InterruptedException {
         if (Mensaje != "") {
             System.out.println("Escritor espera");
+            
             
             
 
         } else {
             
-            Mensaje = "LOLOLO";
+            Mensaje = "Buenas tardes";
             System.out.println("El escritor escribe "+getMensaje());
-           
             notify();
+           
+           
         }
 
     }

@@ -1,4 +1,3 @@
-
 package nº7.psp;
 
 import java.util.logging.Level;
@@ -12,10 +11,6 @@ public class Leer extends Thread{
     Buzon b2=new Buzon();
     
 
-    public Leer(String name) {
-        super(name);
-    }
-    
     
     
         
